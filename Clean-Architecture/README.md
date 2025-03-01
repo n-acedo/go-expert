@@ -1,12 +1,8 @@
 
-## Docker
-`docker-compose up -d`
-
-### Acessar o banco pelo terminal
-`docker-compose exec mysql bash`
-`mysql -uroot -p orders`
-
 ## Rodar a aplicação
+- `docker-compose up -d`
+- `docker-compose exec goapp bash`
+
 No diretório cmd/ordersystem, rodar:
 `go run main.go wire_gen.go`
 
@@ -30,7 +26,7 @@ http://localhost:8080/
 ``` mutation createOrder {
   createOrder(input: {
     id: "d",
- 		Price	: 320,
+ 		Price: 320,
     Tax: 30,
   }) {
     id
